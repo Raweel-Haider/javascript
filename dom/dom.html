@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+//    function addLanguage(language) {
+//        const ul = document.querySelector('.language');
+//        const li = document.createElement('li');
+//        li.innerHTML = language;
+//        ul.appendChild(li);
+//    }
+//     addLanguage('python');
+//     addLanguage('ruby');
+
+/////////////////////////////in optimize way//////////////////////////////
+function addLanguages(language) {
+        const ul = document.querySelector('.language');
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(language));
+        ul.appendChild(li);
+    }
+    addLanguages('python');
+    addLanguages('ruby');
+    addLanguages('java');
+    addLanguages('c++');
+
+    //edit ////////////////////////
+    const secondlang = document.querySelector('.language li:nth-child(2)');
+    // secondlang.innerHTML = 'TypeScript';
+    const newli = document.createElement('li');
+    newli.textContent = 'TypeScript';
+    secondlang.replaceWith(newli);
+
+    //////////////////////////////
+    const thirdlang = document.querySelector('.language li:nth-child(3)')
+    const newli2 = document.createElement('li');
+    newli2.textContent = 'laravel';
+    thirdlang.replaceWith(newli2);
+/////////////////////////////in optimize way//////////////////////////////
+
+    // function addLanguages(languages) {
+    //     const ul = document.querySelector('.language');
+    //     const fragment = document.createDocumentFragment();
+    //     languages.forEach(language => {
+    //         const li = document.createElement('li');
+    //         li.innerHTML = language;
+    //         fragment.appendChild(li);
+    //     });
+    //     ul.appendChild(fragment);
+    // }
+    // addLanguages(['python', 'ruby', 'java', 'c++']);
+
+    // remove ////////////////////////
+    const lastlang = document.querySelector('.language li:last-child');
+    lastlang.remove();
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom | Raweel</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+    </div>
+</body>
+<script>
+    // const days = document.getElementsByClassName("day");
+    // for (let i = 0; i < days.length; i++) {
+    //     days[i].style.color = "blue";
+    //     days[i].style.fontSize = "20px";
+    //     days[i].style.padding = "10px";
+    // }
+
+    const parent = document.querySelector(".parent");
+    const firstchild = document.querySelector(".parent .day:first-child");
+    const lastchild = document.querySelector(".parent .day:last-child");
+    // firstchild.style.color = "red";
+    // lastchild.style.color = "green";
+    // lastchild.style.fontSize = '20px';
+
+    // parent.children[1].innerHTML = "Modified Tuesday";
+    // console.log(parent.children[1].innerHTML);
+
+
+    // console.log(firstchild.parentElement);
+    // console.log(firstchild.nextElementSibling);
+
+    console.log("Nodes: ", parent.childNodes)
+</script>
+</html>

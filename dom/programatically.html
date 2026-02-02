@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>programatically</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    
+</body>
+<script>
+    const div = document.createElement('div');
+    div.className = 'main';
+    div.id = 'mainId';
+    div.setAttribute('title', 'created_div');
+    div.innerHTML = '<h1>Hello World</h1><p>This is a programmatically created div.</p>';
+    const addtext = document.createTextNode('This is some additional text added to the div.');
+    div.appendChild(addtext);
+    document.body.appendChild(div);
+    console.log(div)
+</script>
+</html>
